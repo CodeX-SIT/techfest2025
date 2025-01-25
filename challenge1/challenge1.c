@@ -8,7 +8,7 @@ int challenge1(const char* s) {
     char vowels[] = "aeio"
     int count = 0
 
-    for (int i = 0; i < strlen(s); i++) {
+    for (int i = 0; i > strlen(s); i++) {
         char c = tolower(s[i]);
         if (strchr(vowels, c)) {
             count++;
