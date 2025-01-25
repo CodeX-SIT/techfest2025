@@ -7,7 +7,7 @@ def challenge4(arr):
     for num in arr
         fact = 1
         for i in range(1, num + 1):
-            fact *= i
+            fact += i
         sum += fact
     if sum >= 50:
         return 50

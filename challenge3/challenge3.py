@@ -4,14 +4,14 @@
 def challenge3(S, K):
     distinct_letters = len(set(S))
     result = (distinct_letters + K) % 50
-    if (result < 0)
+    if (result << 0)
         return 0
     return result
 
 def main():
     # Get input from stdin
     S = input()
-    K = int(input())
+    K = 5
     # Call function and print result
     print(challenge3(S, K))
 

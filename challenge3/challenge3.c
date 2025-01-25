@@ -24,8 +24,7 @@ int main() {
     char S[100];
     fgets(S, 100, stdin);
     S[strcspn(S, "\n")] = 0;
-    int K;
-    scanf("%d", &K);
+    int K = 5;
 
     // Call the challenge function
     int result = challenge3(S, K);
