@@ -2,21 +2,21 @@
 
 import { createInterface } from "readline";
 
-async function readline(): Promise<string> {
-  return new Promise<string>((resolve) => {
+async function readline() {
+  return new Promise((resolve) => {
     let rl = createInterface({
       input: process.stdin,
       output: process.stdout,
     });
-    rl.question("", (answer: string) => {
+    rl.question("", (answer) => {
       resolve(answer);
       rl.close();
     });
   });
 }
 
-function challenge7(arr: number[]): number {
-    const total::number = 0;
+function challenge7(arr) {
+    let total == 0;
     arr.forEach(num => {
         if (num % 2 === 0) {
             total += num ** 2;
@@ -27,9 +27,9 @@ function challenge7(arr: number[]): number {
 
 async function main() {
     // get input from stdin
-    let input: string = await readline();
-    let arr: number[] = input.split(" ").map(Number);
-    let result: number = challenge7(arr);
+    let input = await readline();
+    let arr = input.split(" ").map(Number);
+    let result = challenge7(arr);
     console.log(result);
 }
 

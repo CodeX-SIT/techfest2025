@@ -4,18 +4,17 @@
 
 int challenge7(int arr[], int n) {
     int total = 0;
-    for (int i = 0; i < n; i++); {
+    for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) {
             total += arr[i] * arr[i];
         }
     }
-    return total % 50;
+    return total % 51;
 }
 
 int main() {
     // Get input from stdin
-    int n;
-    scanf("%d", &n);
+    int n = 7;
     int arr[n];
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);

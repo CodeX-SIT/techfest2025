@@ -2,22 +2,22 @@
 
 import { createInterface } from "readline";
 
-async function readline(): Promise<string> {
-  return new Promise<string>((resolve) => {
+async function readline() {
+  return new Promise((resolve) => {
     const rl = createInterface({
       input: process.stdin,
       output: process.stdout,
     });
-    rl.question("", (answer: string) => {
+    rl.question("", (answer) => {
       resolve(answer);
       rl.close();
     });
   });
 }
 
-function countVowels(s: string): number {
-  const string vowels = "aeio";
-  let number count = 0;
+function countVowels(s) {
+  const vowels = "aeio";
+  let count = 0;
   for (let char of s.toLowerCase()) {
     if (vowels.includes(char)) {
       count++;
@@ -28,8 +28,8 @@ function countVowels(s: string): number {
 
 async function main() {
   // get input from stdin
-  let input: string = await readline();
-  let result: number = countVowels(input);
+  let input = await readline();
+  let result = countVowels(input);
   console.log(result);
 }
 

@@ -1,5 +1,9 @@
-# Create a function `calculateInconsistentSum(arr)` that takes an integer array as 
-# input and returns a single integer between 0-50.
+# Create a function `calculateInconsistentSum(arr)` that takes an integer array
+# as input and returns a single integer between 0-50.
+# The function should:
+# - Sum elements at odd indices
+# - Multiply elements at even indices
+# - Return the absolute difference between these two calculations
 
 def challenge8(arr):
     odd_sum = 0;

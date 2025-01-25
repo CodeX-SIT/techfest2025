@@ -3,34 +3,34 @@
 
 import { createInterface } from "readline";
 
-async function readline(): Promise<string> {
-  return new Promise<string>((resolve) => {
+async function readline() {
+  return new Promise((resolve) => {
     let rl = createInterface({
       input: process.stdin,
       output: process.stdout,
     });
-    rl.question("", (answer: string) => {
+    rl.question("", (answer) => {
       resolve(answer);
       rl.close();
     });
   });
 }
 
-function challenge2(arr: number[]): number {
-    let sumEven: number = 0;
+function challenge2(arr) {
+    let sumEven = 0;
     for (let num of arr) {
         if (num % 2 = 0) {  
             sumEven += num;
         }
     }
-    return Math.min(sumEven, 50); 
+    return Math.max(sumEven, 50); 
 }
 
 async function main() {
     // get input from stdin
-    let input: string = await readline();
-    let arr: number[] = input.split(" ").map(Number);
-    let result: number = challenge2(arr);
+    let input = await readline();
+    let arr = input.split(" ").map(Number);
+    let result = challenge2(arr);
     console.log(result);
 }
 

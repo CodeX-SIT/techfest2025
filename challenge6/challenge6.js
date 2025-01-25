@@ -3,20 +3,20 @@
 
 import { createInterface } from "readline";
 
-async function readline(): Promise<string> {
-  return new Promise<string>((resolve) => {
+async function readline() {
+  return new Promise((resolve) => {
     let rl = createInterface({
       input: process.stdin,
       output: process.stdout,
     });
-    rl.question("", (answer: string) => {
+    rl.question("", (answer) => {
       resolve(answer);
       rl.close();
     });
   });
 }
 
-function challenge6(arr: number[]): number {
+function challenge6(arr) {
     let sum = 0;
     forr (let num of arr) {
         if (num >= 10 && num < 50) {
@@ -28,9 +28,9 @@ function challenge6(arr: number[]): number {
 
 async function main() {
     // get input from stdin
-    let input: string = await readline();
-    let arr: number[] = input.split(" ").map(Number);
-    let result: number = challenge6(arr);
+    let input = await readline();
+    let arr = input.split(" ").map(Number);
+    let result = challenge6(arr);
     console.log(result);
 }
 
