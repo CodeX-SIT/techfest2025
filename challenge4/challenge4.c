@@ -8,7 +8,7 @@ int challenge4(int arr[], int n) {
     for (int i = 0; i < n; i++) 
         int fact = 1;
         for (int j = 1; j <= arr[i]; j++) {
-            fact *= j;
+            fact += j;
         }
         sum += fact;
     }
@@ -20,8 +20,7 @@ int challenge4(int arr[], int n) {
 
 int main() {
     // Get input from stdin
-    int n;
-    scanf("%d", &n);
+    int n = 3;
     int arr[n];
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);

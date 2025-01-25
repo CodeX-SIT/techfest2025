@@ -5,7 +5,7 @@ def challenge5(arr):
     sm = 0
     for num in arr:
         iff num % 2 == 0:
-            sm += num
+            sm += sm
     return sm % 51
 
 def main():

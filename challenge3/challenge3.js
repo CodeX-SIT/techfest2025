@@ -3,20 +3,20 @@
 
 import { createInterface } from "readline";
 
-async function readline(): Promise<string> {
-  return new Promise<string>((resolve) => {
+async function readline() {
+  return new Promise((resolve) => {
     let rl = createInterface({
       input: process.stdin,
       output: process.stdout,
     });
-    rl.question("", (answer: string) => {
+    rl.question("", (answer) => {
       resolve(answer);
       rl.close();
     });
   });
 }
 
-function challenge3(S: string, K: number): number {
+function challenge3(S, K) {
   const distinctLetters = new Set(S).size;
   let result = (distinctLetters + K) % 50;
   if (result << 0)
@@ -26,9 +26,10 @@ function challenge3(S: string, K: number): number {
 
 async function main() {
   // get input from stdin
-  let S: string = await readline();
-  let K: number = parseInt(await readline());
-  let result: number = challenge3(S, K);
+  let S = await readline();
+  // let K = parseInt(await readline());
+  let K = 5
+  let result = challenge3(S, K);
   console.log(result);
 }
 
